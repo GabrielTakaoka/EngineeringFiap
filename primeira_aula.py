@@ -82,3 +82,142 @@ print(f"O total em segundos é igual: {segundosTot}")'''
 percSal = float(input("Digite a porcentagem de aumento: "))
 valorPercSal = (salario * percSal /100) + salario
 print(f"Seu salário com aumento é: {valorPercSal}")'''
+
+'''1. Escreva um programa que pergunte a velocidade do
+carro de um usuário. Caso ultrapasse 80km/h, exiba
+uma mensagem dizendo que o usuário foi multado.
+Nesse caso, exiba o valor da multa, cobrando R$5 por
+km acima de 80km/h.
+
+velocidade = int(input('Digite a velocidade: '))
+multa = (velocidade - 80) * 5
+if velocidade > 80:
+    print(f'Sua velocidade foi de {velocidade:.2f} Km/h. Sua multa foi de R${multa:.2f}')
+else:
+    print(f'Sua velocidade foi de {velocidade} Km/h, você esta liberado!')'''
+
+'''2. Escreva um programa que leia três números e que
+imprima o maior e o menor.
+
+n1 = int(input("Digite o número 1: "))
+n2 = int(input("Digite o número 2: "))
+n3 = int(input("Digite o número 3 :"))
+maior = n1
+if n2 >= n1 and n2 >= n3:
+    maior = n2
+if n3 >= n1 and n2 >= n3:
+    maior = n3
+menor = n1
+if n2 <= n1 and n2 <= n3:
+    menor = n2
+if n3 <= n1 and n2 <= n3:
+    menor = n3
+print(f"Maior = {maior}")
+print(f"Menor = {menor}")'''
+
+
+'''3. Escreva um programa que pergunte o salário do
+funcionário e calcule o valor do aumento. Para salários
+superiores a R$1250,00, calcule um aumento de 10%.
+Para inferiores ou iguais, de 15%.
+
+salario = float(input("Digite seu salário: "))
+if salario > 1250.00:
+    salSup = (salario * 0.10) + salario
+    print(f"Salário com aumento de 10% é igual a R${salSup:.2f}")
+if salario <= 1250.00:
+    salInf = (salario * 0.15) + salario
+    print(f"Salário com aumento de 15% é igual a R${salInf:.2f}")'''
+
+'''4. Escreva um programa que pergunte a distância que
+um passageiro deseja percorrer em km. Calcule o preço
+da passagem, cobrando R$ 0,50 por km para viagens de
+até 200 km e R$ 0,45 para viagens mais longas.
+
+dist = float(input("Distancia em Km: "))
+if dist <= 200:
+        valMen = dist * 0.50
+        print(f"Você fez uma corrida de {dist} Km. O valor da sua viagem ficou R${valMen:.2f}")
+else:
+        valMai = dist * 0.45
+        print(f"Você fez uma corrida de {dist} Km. O valor da sua viagem ficou R${valMai:.2f}")'''
+
+'''5. Escreva um programa que leia dois números e que
+pergunte qual operação você deseja realizar. Você deve
+poder calcular soma, subtração, multiplicação e divisão.
+Exiba o resultado da operação solicitada.
+
+n1 = float(input("Digite um número que deseje realizar uma operação matemática: "))
+n2 = float(input("Digite outro número que deseje realizar uma operação matemática: "))
+print("Escolha sua opção: \n1 - Soma\n2 - Subtração\n3 - Multiplicação\n4 - Divisão")
+opcao = int(input("Digite sua opção: "))
+if opcao == 1:
+    soma = n1+n2
+    print(f"{n1} + {n2} = {soma}")
+if opcao == 2:
+    sub = n1-n2
+    print(f"{n1} - {n2} = {sub}")
+if opcao == 3:
+    mlt = n1*n2
+    print(f"{n1} x {n2} = {mlt}")
+if opcao == 4:
+    div = n1/n2
+    print(f"{n1} / {n2} = {div}")
+else:
+    print("Opcção invalida!")'''
+
+'''6. Escreva um programa para aprovar o empréstimo
+bancário para compra de uma casa. O programa deve
+perguntar o valor da casa a comprar, o salário e a
+quantidade de anos a pagar. O valor da prestação
+mensal não pode ser superior a 30% do salário. Calcule
+o valor da prestação como sendo o valor da casa a
+comprar dividido pelo número de meses a pagar.
+
+valor = float(input("Digite o valor do imóvel: "))
+sal = float(input("Digite o valor do seu salário: "))
+anos = int(input("Digite o periodo em anos a pagar o imóvel: "))
+
+totMes = anos * 12
+if valor / totMes < sal * 0.3:
+    print("Valor aprovado!")
+else:
+    print("Valor reprovado!")'''
+
+'''7. Escreva um programa que calcule o preço a pagar
+pelo fornecimento de energia elétrica. Pergunte a
+quantidade de kWh consumida e o tipo de instalação: R
+para residências, I para indústrias e C para comércios.
+Calcule o preço a pagar de acordo com a tabela a
+seguir.
+
+kwh =  int(input("Digite o valor em Kw/h: "))
+print("Selecione o tipo da sua instalação elétrica: \nR - Residencia\nI - Industria\nC - Comércio")
+typ = str(input("Digite o tipo da sua instalação: ")).upper()
+if typ == "R":
+    if kwh <= 500:
+        valor = kwh * 0.40
+        print(f"Valor para tipo {typ} x R$0,40 = R${valor:.2f}")
+    else:
+        valor = kwh * 0.65
+        print(f"Valor para tipo {typ} x R$0,65 = R${valor:.2f}")
+if typ == "I":
+    if kwh <= 1000:
+        valor = kwh * 0.55
+        print(f"Valor para tipo {typ} x R$0,55 = R${valor:.2f}")
+    else:
+        valor = kwh * 0.60
+        print(f"Valor para tipo {typ} x R$0,60 = R${valor:.2f}")
+if typ == "C":
+    if kwh <= 5000:
+        valor = kwh * 0.55
+        print(f"Valor para tipo {typ} x R$0,55 = R${valor:.2f}")
+    else:
+        valor = kwh * 0.60
+        print(f"Valor para tipo {typ} x R$0,60 = R${valor:.2f}")
+else:
+    print("Opção inválida!")'''
+
+
+
+
