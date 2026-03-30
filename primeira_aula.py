@@ -11,6 +11,7 @@ print(f"A soma de {n1} + {n2} é igual {soma}")
 print(type(soma))
 print(f"A média é igual {media}")
 print(type(media))'''
+from time import sleep
 
 #Ex1, Ex2, Ex3:
 """nome = input('Digite seu nome: ')
@@ -218,6 +219,99 @@ if typ == "C":
 else:
     print("Opção inválida!")'''
 
+'''8. Faça um programa que leia 2 notas de um aluno,
+calcule a média e imprima aprovado ou reprovado (para
+ser aprovado a média deve ser no mínimo 6).
 
+nota1 = float(input("Digite a 1ª nota: "))
+nota2 = float(input("Digite a 2ª nota: "))
+media = (nota1 + nota2) / 2
+if media >= 6:
+ print("Aprovado!")
+else:
+ print("Reprovado!")'''
+
+'''9. Refaça o exercício 8, identificando o conceito
+aprovado (média superior ou igual a 6), exame (média
+maior ou igual a 4 e menor que 6) ou reprovado (média
+inferior a 4).
+
+nota1 = float(input("Digite a 1ª nota: "))
+nota2 = float(input("Digite a 2ª nota: "))
+media = (nota1 + nota2) / 2
+if media >= 6:
+ print("Aprovado")
+elif media >=4 and media <6:
+ print("Exame")
+else:
+ print("Reprovado")'''
+
+'''Aula 4'''
+
+'''1. Faça um programa para exibir os números de 1 a 100.
+
+n = 0
+while n < 100:
+    n = n+1
+    print(f"{n} patinho")'''
+
+'''2. Faça um programa para exibir os números de 50 a
+100.
+
+n = 50
+
+while n <= 100:
+    print(n)
+    n = n + 1'''
+
+'''3. Faça um programa para escrever a contagem
+regressiva do lançamento de um foguete. O programa
+deve imprimir 10, 9, 8, ..., 1, 0 e Fogo! Na tela.
+
+n = 10
+while n > 0:
+    print(f"{n}")
+    n = n - 1
+    sleep(1)
+print("Manda o zap")'''
+
+'''4. Faça um programa para imprimir de 1 até o número
+digitado pelo usuário que mostre apenas os números
+ímpares.
+
+n = int(input("Digite um número: "))
+ninit = 1
+while ninit <= n:
+    print(ninit)
+    ninit = ninit + 1'''
+
+'''5. Faça um programa para escrever os 10 primeiros
+múltiplos de 3.
+
+n = 3
+
+while n <= 30:
+    print(n)
+    n = n + 3'''
+
+'''6. Faça um programa para exibir os resultados de uma
+tabuada no formato: 2 x 1 = 2, 2 x 2 = 4, ...
+
+n1 = int(input("Digite um número da tabuada: "))
+
+for i in range(10):
+    result = n1 * i
+    print(f"{i} x {n1} = {result}")'''
+
+'''7. Modifique o programa interior de forma que o usuário
+também digite o início e o fim da tabuada, em vez de
+começar com 1 e 10.
+
+n1 = int(input("Digite um número da tabuada: "))
+n2 = int(input("Digite o número final da tabuada: "))
+n2 = n2 + 1
+for i in range(n2):
+    result = n1 * i
+    print(f"{i} x {n1} = {result}")'''
 
 
