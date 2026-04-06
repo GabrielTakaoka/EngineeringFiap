@@ -313,5 +313,62 @@ n2 = n2 + 1
 for i in range(n2):
     result = n1 * i
     print(f"{i} x {n1} = {result}")'''
+'''8. Escreva um programa que pergunte o depósito inicial
+e a taxa de juros de uma poupança. Exiba os valores
+mês a mês para os 24 primeiros meses. Escreva o total
+do ganho com juros no período.
+
+n1 = float(input("Digite o valor inicial: "))
+juros = float(input("Taxa de juros: "))
+periodo = 1
+ganhoJuros = 0
+ganhoTot = n1
+
+while periodo != 25:
+    ganhoJuros = ganhoTot * (juros / 100)
+    ganhoTot = ganhoTot + ganhoJuros
+    print(f"{periodo}º mês o ganho foi de R${ganhoJuros:.2f} totalizando: R${ganhoTot:.2f}")
+    periodo = periodo + 1'''
+
+'''9. Altere o programa anterior de forma a perguntar
+também o valor depositado mensalmente. Esse valor
+será depositado no início de cada mês e você deve
+considerá-lo para o cálculo de juros do mês seguinte.
+
+n1 = float(input("Digite o valor inicial: "))
+juros = float(input("Taxa de juros: "))
+periodo = 1
+ganhoJuros = 0
+ganhoTot = n1
+
+while periodo != 25:
+    qntMens = float(input(f"Quantia depositada no {periodo}º mês: "))
+    ganhoJuros = (qntMens + ganhoTot) * (juros / 100)
+    ganhoTot = ganhoTot + ganhoJuros + qntMens
+    print(f"{periodo}º mês o ganho foi de R${ganhoJuros:.2f} totalizando: R${ganhoTot:.2f}")
+    periodo = periodo + 1'''
+
+'''10. Escreva um programa que
+leia números inteiros do teclado.
+O programa deve ler os números
+até que o usuário digite 0 (zero).
+No final da execução, exiba a
+quantidade de números digitados,
+assim como a soma e a média
+aritmética.
+
+n1 = int
+soma = 0
+cont = 0
+while n1 != 0:
+    n1 = int(input("Digite um número: "))
+    if n1 == 0:
+        break
+    soma = soma + n1
+    cont = cont + 1
+    media = soma / cont
+print(f"Números digitados: {cont}\nA soma de todos os números é = {soma}\nA média deles é = {media}")'''
+
+
 
 
